@@ -48,11 +48,10 @@ namespace WindowsFormsApp9
             StartPosition = FormStartPosition.Manual;
             Location = new Point(0, 0);
             Size = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
-            //Image myimage = new Bitmap(@Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Microsoft\\Windows\\Themes\\TranscodedWallpaper"));
-            Image myimage = new Bitmap("test2.png");
+            Image myimage = new Bitmap(@Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Microsoft\\Windows\\Themes\\TranscodedWallpaper"));
             Bitmap bitmap = new Bitmap(@Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Microsoft\\Windows\\Themes\\TranscodedWallpaper"));
-            bitmap = Blur(bitmap, 10);
-            BackgroundImage = bitmap;
+            //bitmap = Blur(bitmap, 10);
+            BackgroundImage = myimage;
             BackgroundImageLayout = ImageLayout.Stretch;
             this.TopMost = true;
             string userName = System.Environment.UserName.ToString();
